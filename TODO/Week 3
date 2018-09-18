@@ -1,0 +1,70 @@
+Technologies and Concepts to figure out
+
+Sensors
+	-What sensors do we want to use?
+	-How much power can we get from each sensor?
+		-Does this scale linearly
+	-How many sensors will we use?
+	-How accurate/granular is the force measurement
+	-How will sensors be arranged?
+	-What forces can the sensor withstand?
+	
+Enery Harvester
+	-What are the availaible energy harvesting chips
+	-How much power does energy harvesting chips use
+	-Does it only provide bursts of energy, or can it supply sustained energy
+	-What kind of configuration would the sensors need to be in?
+	-Does it need external components (capactitors?)
+		-How many, and what size?
+		
+Energy Harvesting Alternatives
+	-What can be used to supply power?
+	-What are the power specs?
+	-Does it need to recharge?
+	-What is the size?
+		
+Microcontroller
+	-Find microcontroller based on power supply?
+	-How many ADC units?
+	-size?
+	-can pins be read in sleep mode?
+	-how to program it?
+	-cost?
+	-Is bluetooth embedded?
+	
+Bluetooth Transmitters
+	-Find available bluetooth chips
+	-power consumption?
+	-interface?
+	-range?
+	
+Phone Service
+	-What do we want the phone service to do
+		-Send over wifi and/or LTE?
+	-Just data relay, or should we do processing?
+	-Can we send GPS data with the other data?
+		-other possible data? acceleration, etc.
+	-UI components?
+	
+Web Server
+	-what sevice are we going to use to host our server?
+	-What OS does it run?
+	-cost?
+	-How many processes can we run on it?
+	-What software it supports
+		-Can it run backend scripts in the language we want?
+		
+	backend
+		-What backend framework should be used?
+		-What kind of features do we want?
+			-Does that change how we store/process data
+		
+	frontend
+		-what front end framework should be used?
+		-What is out UI going to look like
+
+Database
+	-What type of database we want to use for storing data	
+		-timeseries
+		-NoSQL or SQL
+	
