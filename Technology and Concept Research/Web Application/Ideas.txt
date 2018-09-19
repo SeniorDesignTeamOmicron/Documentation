@@ -1,0 +1,92 @@
+Web Server Hosting:
+	-AWS Webiste Solutions
+		-https://aws.amazon.com/websites/
+		-one console to manage their web server, DNS, and networking
+		-Websites built on popular development stacks like LAMP, LEMP, MEAN, Node.Js
+		-low to medium trafficked sites with multiple authors and more frequent content changes
+		-Dynamically grow and shrink resources
+		-datacenter hosting your website in any geography 
+		-AWS only charges you for the resources you use
+	-HostGator
+		-https://www.hostgator.com
+		-Free domain
+		-unmetered bandwidth
+		-free SSL certificate
+		-Unlimited MySQL Databases with phpMyAdmin Access
+		-Programming Language: CGI, Fast CGI, PHP 5 and 7, Ruby on Rails, Perl, Python, SSL
+		-no **MongoDB or Node.js**
+	-Google Firebase Hosting
+		-https://firebase.google.com/docs/hosting/
+		-Zero-configuration SSL
+		-Each file cahced on SSD at CDN edges around world
+		-Easy deployment
+		-one-click rollbacks
+		-powerful with Angular (static webpage)
+		-project deployed on subdomain from local directory
+		-Can connect custom domains
+		-comes with authentication and storage services
+	-Google Cloud
+		-
+	-Heroku
+		-https://www.heroku.com/
+		-load balancing, failovers, logging, security
+		-Heroku scales in an instant, both vertically and horizontally
+		- pre-integrated services like New Relic, MongoDB, SendGrid, Searchify, Fastly, Papertrail, ClearDB MySQL, Treasure Data, and more.
+		-Code and data rollback
+		-GitHub Integration
+		-ustomize your stack with a Heroku innovation: Buildpacks. Build your own, or choose one from the hundreds built by the community to run Gradle, 
+		-Free SSL & certificate management
+		-$7/month - 512 MB RAM
+		
+-Web Framework
+	-Front End
+		-Angular
+			-expressive html
+			-extrememly modular (automatic splitting of modules)
+			-two way data binding
+			-no direct DOM manipulation
+			
+			-longer intial load times
+		-React
+			-able to rendered server side and client side
+			-virtual DOM
+			-Albe to view functions of the state (easier testing)
+			-one way data binding
+			
+			-JavaScript XML - steep learning curve
+			-lacks documentation
+			-Not fully MVC - need extra libraries
+		-Ember
+		
+		-Vue
+			-plain HTML based templates and single file components
+			-lightweight
+			-well documented
+			-smaller learning curve - only need to know HTML, CSS, and javascript
+
+		-ionic
+	-Back End
+		-Express
+			-https://expressjs.com/
+			-nodeJS
+			-event driven, non-blocking I/O
+			-lightweight
+			-npm package repo (largest open source library)
+		-Django
+			-https://www.djangoproject.com/
+			-Python
+			-build in security (SQL injection, cross-site scripting, etc)
+			-takes care of user auth, content admin, site maps
+			-database interface
+			-All in one solution
+		-Flask
+			-http://flask.pocoo.org/
+			-focused on simplicity, minimalism, and fine grain control (https://www.netguru.co/blog/flask-vs-django-comparison-which-python-framework-is-better-for-your-app)
+			-smaller community than Django
+			-less restrictive than Django
+-User Authentication
+	-passportjs
+		-http://www.passportjs.org/
+	
+-Database
+	
