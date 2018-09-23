@@ -1,0 +1,66 @@
+Front End Framework Comparison:
+
+Angular - https://angular.io/docs
+-Extensive documentation with lots of 3rd party resources and tutorials
+-MVVM architecture
+-expressive HTML
+-extremely modular (automatic splitting of modules)
+-two way data binding
+-no direct DOM manipulation
+-long initial load times
+-Uses Typescript instead of javascript
+-complex syntax
+-Structured, separated components and services
+
+React - https://reactjs.org/
+-Lots of community support, resources, and tutorials
+-able to rendered server side and client side
+-virtual DOM - arranging documents into tree for better web browser parsing
+-Able to view functions of the state (easier testing)
+-one-way data binding
+	- downward data flow 
+	- child elements don't affect parent data
+-JavaScript XML - steep learning curve
+	- Allows javascript to be interwoven with UI
+-lacks documentation
+-Not fully MVC - need extra libraries - only V out of box
+-simple syntax
+-lots of flexibility
+-lightweight
+
+
+Vue - https://vuejs.org/
+-Good documentation, but the community is not as large as the Angular and React communities
+-enhanced HTML based templates and single file components
+	- similar to Angular
+-lightweight
+-reusable templates
+-one-way data binding 
+-Supports both single page apps and non-single page apps
+-well documented
+	- has documentation specific to certain scenarios
+-smaller learning curve - only need to know HTML, CSS, and javascript
+-tiny size (20 KB)
+-more flexibility than angular
+-less supporting packages and plugins
+-Vue is a framework that is really similar to Angular, but it is much smaller, with 
+	less complex syntax, and a smaller learning curve
+-Vue has a robust CLI similar to Angular, with more to offer than React's
+	- Configuration options when starting project (not available in React)
+
+End Notes:
+All 3 front end frameworks provide similar speed performance, however, Angular typically has a longer
+initial load time. In terms of learning curve, both Angular and React have steep learning curves, with
+Angular having complex syntax, and React using JSX for UI development. Vue offers the smallest learning
+curve by using native javascript, CSS, and HTML to implement rich, expressive user interfaces. Vue also
+has advantage in terms of size. Due to Angular's heavy use of libraries, complex syntax, and other 
+features, it becomes bloated. Both Vue and React are much smaller in size, with libraries being included
+as they are required. Angular provides more structure, but this structure can be restrictive at times; 
+React and Vue allow for much greater flexibility. The flexibility of Vue and React can sometimes make it
+more difficult to start projects, but Vue offers a powerful CLI that helps setup projects with various 
+configuration settings available. Vue is currently less popular than Angular and React - leading to a smaller
+supporting community and a smaller collection of libraries, but Vue is quickly growing in community size
+and popularity. In the end, Vue likley offers the best option for our project due to its small size, and smaller
+learning curve. Our front end UI is meant to be simple, providing a portal for viewing statistics. The 
+added size of Angular, and complexity of React and Angular most likley make them a less beneficial option
+for our project.
