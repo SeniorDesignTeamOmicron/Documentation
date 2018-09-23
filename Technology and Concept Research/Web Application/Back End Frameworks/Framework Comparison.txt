@@ -1,0 +1,53 @@
+Back End Framework Comparison
+-Express - https://expressjs.com/
+	-Language nodeJS
+	-event driven, non-blocking I/O
+	-lightweight
+	-Native support for both SQL and noSQL databases
+	-routing
+	-separate handlers for put, get, post, etc.
+	-view caching
+	-npm package repo (largest open source library)
+-Django - https://www.djangoproject.com/
+	-Python
+	-rigid application structure
+	-build in security
+		-SQL injection
+		-cross-site scripting
+		-cross-site request forgery
+		-clickjacking
+	-takes care of user auth, content admin, site maps
+	-highly scalable
+	-follows MVC pattern
+	-designed for database driven websites
+	-relational database interface
+		-build in object-relational mapper
+		-built in support for SQL database managers
+		-Ability to quickly and seamlessly switch between different DBMS
+		-database is closely coupled with the backend application
+	-admin interface for user control
+		-add, change, and delete users with ease
+	-All in one solution
+-Flask - http://flask.pocoo.org/
+	-focused on simplicity, minimalism, and fine grain control (https://www.netguru.co/blog/flask-vs-django-comparison-which-python-framework-is-better-for-your-app)
+	-smaller community than Django
+	-less restrictive than Django
+	-no object-relational mapper
+		-allows greater flexibility, but more work implementing solution
+		
+Express, Django, and Flask are 3 of the most popular frameworks used for creating backend web services.
+Choosing between them requires knowledge of the task at hand. Express is build on NodeJS, and is designed
+for efficient event driven programs. Express also integrates well with NoSQL databases such as MongoDB, which
+may be beneficial for storing complex data structures. Django and Flask, on the other hand, are built on Python,
+which offers a core API much more equipped for data processing. While Django and Flask share a common underlying
+programming language, they are quite different. Django offers a "batteries included" approach, providing several
+tools for quick and efficient prototyping. Additionally, Django specializes in providing a inteface for integrating
+relational databases into an application. This reduces the effort required for performing CRUD operations and 
+querying for data. Flask on the other hand, offers a bare-bones, minimalism approach. This offers inherit benefits,
+such as increased freedom and size, but can make it more difficult to rapidly prototype and develop. This 
+provides increased flexibility for the type of database and management systems being used for storing and querying data,
+but increases the effort required for integrating databases into the application. Our project will mostly be a data
+driven application, serving data visualization views to clients. Because of this, it makes more sense 
+for our back end technology to utilize the Django framework. Using this, our relational databases can be easily
+integrated into the application, Python can be used for efficient data manipulation, and other Django features such as
+user authentication, security, and more can be used to support development.
