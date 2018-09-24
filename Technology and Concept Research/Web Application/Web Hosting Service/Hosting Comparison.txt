@@ -72,3 +72,15 @@ Web Server Hosting:
 			-Free SSL & certificate management
 			-$7/month - 512 MB RAM
 			-10 process types
+			
+Web hosting capabilities vary a lot from service to service. Certain web hosting services may only support certain technologies, or
+offer options where an environment can be customized, but for a large price. Based on the performed research, Heroku appears
+to be the best option for active development. Many web hosting services can be found that are cheaper, but those are likley more
+appropriate for production ready software. For the development of this project, Heroku offers an environment that not only supports
+almost any language and framework, but also allows for 1000 hours of free development. This means that our application can be developed 
+and tested without any price tag. Additionally, Heroku offers support for hosting Django and express projects - two of the backend
+frameworks being considered for this project. In addition to the backend framework, our application will require a hosted database, 
+something that Heroku supports. Heroku supports mySQL, postgres, and other databases that are not supported in hosting 
+services such as hostgator, or firebase. Heroku also includes extensive, easy to navigate documentation which many of the other 
+hosting services lack. Once the application is in it's final form, it can then be easily transfered over to a paid version of 
+a Heroku service, which includes additional services such as free SSL and certificate management
