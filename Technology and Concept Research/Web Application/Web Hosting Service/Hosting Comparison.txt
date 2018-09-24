@@ -1,0 +1,74 @@
+Web Server Hosting:
+	-AWS Webiste Solutions
+		-https://aws.amazon.com/websites/
+		-one console to manage their web server, DNS, and networking
+		-Websites built on popular development stacks like LAMP, LEMP, MEAN, Node.Js
+		-low to medium trafficked sites with multiple authors and more frequent content changes
+		-Dynamically grow and shrink resources
+		-datacenter hosting your website in any geography 
+		-AWS only charges you for the resources you use
+		-steep learning curve
+		-documentation can be difficult to navigate
+	-HostGator
+		-https://www.hostgator.com
+		-Free domain
+		-unmetered bandwidth
+		-free SSL certificate
+		-Unlimited MySQL Databases with phpMyAdmin Access
+		-Programming Language: CGI, Fast CGI, PHP 5 and 7, Ruby on Rails, Perl, Python, SSL
+		-no **MongoDB or Node.js**
+		-Documentation can be difficult to locate
+		-Supports Django with SQLite on shared servers (https://support.hostgator.com/articles/django-with-fastcgi)
+			-Django is technically not a supported application and only supports SQLite as a databases
+			-Would have to use a separate service for hosting the database
+			
+		-Hatchling plan								cloud version - hatchling
+			-$2.75/month 								-2 cores
+			-single plan								-2 GB memory
+			-free ssl certificate						-$4.95/month
+		-Baby plan										-local caching
+			-$3.95/month
+			-one click installs						cloud version - baby
+			-unmetered bandwidth						-4 cores
+			-free ssl certificate						-4 GB memory
+		-business plan									-$6.57/month
+			-unlimited domains
+			-one click installs						cloud version - business
+			-unmetered bandwidth						- 6 cores
+			-free ssl certificate						- 6 GB memory
+			-free upgrade to positive ssl				-$9.95/month
+			-free dedicated IP
+			-free SEO tools
+	-Google Firebase Hosting
+		-https://firebase.google.com/docs/hosting/
+		-Zero-configuration SSL
+		-Each file cahced on SSD at CDN edges around world
+		-Easy deployment
+		-one-click rollbacks
+		-powerful with Angular (static webpage)
+		-project deployed on subdomain from local directory
+		-Can connect custom domains
+		-comes with authentication and storage services
+		-meant for ***hosting static resources*** such as HTML, CSS, javascript or media files
+
+	-Heroku
+		-https://www.heroku.com/
+		-load balancing, failovers, logging, security
+		-Heroku scales in an instant, both vertically and horizontally
+		-pre-integrated services like New Relic, MongoDB, SendGrid, Searchify, Fastly, Papertrail, ClearDB MySQL, Treasure Data, and more.
+			-easily hosts postgres(SQL) databases
+		-Code and data rollback
+		-supports Node.js, Python, and more applications
+		-Documentation for deploying Django apps on Heroku (https://devcenter.heroku.com/articles/deploying-python)
+		-GitHub Integration
+		-customize your stack with a Heroku innovation: Buildpacks. Build your own, or choose one from the hundreds built by the community to run Gradle, 
+		Development
+			-free account with 1000 free dyno hours
+			-sleeps after 30 minutes
+			-custom domains
+			-512 MB RAM - 1 web/1 worker
+		
+		Production
+			-Free SSL & certificate management
+			-$7/month - 512 MB RAM
+			-10 process types
