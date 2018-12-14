@@ -9,10 +9,10 @@
 * [x] __[Milestone]__ Have a working prototype for the insole by Friday 12/7.
 * [x] Finish the User Authentication System (for both the web app and the API exposed for the mobile app) by Friday 12/7.
 ## Week 3
-* [ ] Finish data schema for the web application and expose the API, allowing the mobile app to save step data in the database.
-* [ ] Finalize the insole design and submit design documentation.
+* [x] Finish data schema for the web application and expose the API, allowing the mobile app to save step data in the database.
+* [x] Finalize the insole design and submit design documentation.
 * [ ] Have ADC units working.
-* [ ] Send data over a bluetooth connection.
+* [x] Send data over a bluetooth connection.
 * [ ] Send and recieve data over Bluetooth from/to the mobile application.
 ## Week 4
 * [ ] Continue design work on all phases of the project.
