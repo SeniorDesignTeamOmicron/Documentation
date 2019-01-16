@@ -11,16 +11,16 @@
 ## Week 3
 * [x] Finish data schema for the web application and expose the API, allowing the mobile app to save step data in the database.
 * [x] Finalize the insole design and submit design documentation.
-* [ ] Have ADC units working.
+* [x] Have ADC units working.
 * [x] Send data over a bluetooth connection.
 * [ ] Send and recieve data over Bluetooth from/to the mobile application.
 ## Week 4
-* [ ] Continue design work on all phases of the project.
-* [ ] Begin work on ADC step data buffer.
+* [x] Continue design work on all phases of the project.
+* [x] Begin work on ADC step data buffer.
 * [ ] Begin power optimizations on the microcontroller.
 * [ ] Connect the mobile application's user auth system to the web application.
 ## Week 5
-* [ ] Continue design work on all phases of the project.
+* [x] Continue design work on all phases of the project.
 ## Week 6
 * [ ] __[Milestone]__ Have a working prototype for the Microcontroller by Friday 1/18.
   * Bluetooth Connection
