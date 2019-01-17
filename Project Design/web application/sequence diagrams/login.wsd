@@ -1,0 +1,42 @@
+@startuml
+title Login
+actor User
+participant Views
+participant Templates
+participant Services
+participant Models
+database DB
+
+User -> Views: GET /logisteps/
+Views -> Services: isLoggedIn
+Services --> Views: False
+Views --> User: redirect to /account/login/
+
+User -> Views: GET /account/login/
+Views -> Templates: render login.html
+Templates --> Views
+Views --> User: 200
+
+User -> Views: POST /account/login/
+Views -> Services: Authenticate()
+Services -> Models
+Models -> DB
+DB --> Models
+Models --> Services
+Services --> Views
+
+alt if authentication successful
+
+    Views --> User: redirect to /logisteps/
+    User -> Views: GET /logisteps/
+    Views -> Templates: render homepage
+    Templates --> Views
+    Views --> User: 200
+
+else if authentication failed
+
+    Views --> User: 400; dispaly login with error
+
+end
+
+@enduml
