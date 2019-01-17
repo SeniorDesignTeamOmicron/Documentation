@@ -1,0 +1,93 @@
+@startuml registerUser
+title First Time User
+
+actor User
+participant Views
+participant Templates
+participant Services
+participant Models
+database DB
+
+User -> Views: GET /logisteps/
+Views -> Services: isLoggedIn()
+Services --> Views: False
+Views -> User: redirect to login
+User -> Views: GET /account/login/
+Views -> Templates: render login.html
+Templates --> Views
+Views --> User: 200 OK
+
+alt user attempts to login
+
+    User -> Views: POST /accounts/login/
+    Views -> Services: authenticate()
+    Services -> Models: Check if valid credentials
+    Models -> DB
+    DB --> Models
+    Models --> Services
+    Services --> Views: False
+    Views --> User: Present error message
+
+else user registers
+
+    User -> Views: GET /logisteps/register/
+    Views --> User: 200 OK
+
+    User -> Views: POST /logisteps/register/
+    Views -> Views: validate
+
+    alt if input error
+        
+        Views --> User: 400 Bad Request; indicate error
+
+    else validation passes
+
+        Views -> Models: Create User
+
+        alt if username exists
+
+            Models --> Views: Error: user exists
+            Views --> User: 400 Render page with error message
+
+        else if username unique
+
+            Models -> DB
+            DB --> Models
+            Models --> Views
+
+            Views -> User: redirect to complete profile
+
+            User -> Views: GET /logisteps/profile/complete
+            Views -> Templates: render complete_profile.html
+            Templates --> Views
+            Views --> User: 200 OK
+
+            User -> Views: POST /logisteps/profile/complete
+            Views -> Views: validate
+            
+            alt input bad
+                Views --> User: 400; render error message
+            else valid input
+                Views -> Models: create LogistepsUser
+                Models -> Models: create left shoe
+                Models -> Models: create right shoe
+
+                Models -> DB
+                DB --> Models
+                Models --> Views
+                Views --> User: redirect to /logisteps/
+
+                User -> Views: GET /logisteps/
+                Views -> Services: isLoggedIn()
+                Services --> Views: true
+                Views -> Templates: render homepage
+                Templates --> Views
+                Views --> User: 200
+            end
+        
+        end
+
+    end
+
+end
+@enduml
