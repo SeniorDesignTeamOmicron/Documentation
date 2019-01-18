@@ -1,0 +1,33 @@
+@startuml
+Title Authenticate User from Mobile App
+actor Mobile_App
+participant Views
+participant Serializer
+participant Services
+participant Models
+database DB
+
+Mobile_App -> Views: GET /api/user/<username>/
+note left: Note: User credentails are \n provided in the \n header of the request.
+Views -> Services: Authenticate
+Services --> Views
+
+alt if authentication failure
+
+    Views --> Mobile_App: 403 Forbidden
+    note left: If 403, client \n knows login failed.
+
+else if authentication success
+
+    Views -> Models: get LogistepUsers where username\nis username provided in header
+    Models -> DB
+    DB --> Models
+    Models --> Views
+    Views -> Serializer: serialize user object
+    Serializer --> Views
+    Views --> Mobile_App: 200 OK
+    note left: client can use user object data \n to populate fields, or simply ignore
+
+end
+
+@enduml
