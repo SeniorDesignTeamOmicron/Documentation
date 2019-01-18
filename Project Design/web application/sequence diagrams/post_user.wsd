@@ -1,0 +1,48 @@
+@startuml
+Title Create User from Mobile App
+actor Mobile_App
+participant Views
+participant Serializer
+participant Services
+participant Models
+database DB
+
+Mobile_App -> Views: POST /api/user/
+Views -> Serializer: decode LogistepsUser\nJSON
+Serializer -> Serializer: validate
+
+alt invalid format
+
+    Serializer --> Views
+    Views --> Mobile_App: 400 Bad Request
+
+else valid format
+
+    Serializer -> Models: create LogistepsUser
+    Models -> Models: check unique user
+
+    alt user exists
+
+        Models --> Serializer
+        Serializer --> Views
+        Views --> Mobile_App: 400 Bad Request.\nmessage: user exists
+
+    else unique user
+
+        Models -> Models: create auth_user
+        Models -> DB: write user object
+        Models -> Models: create left_shoe
+        Models -> DB: write left_shoe
+        Models -> Models: create right_shoe
+        Models -> DB: write right_shoe
+        Models -> DB: write LogistepsUser
+
+        Models --> Serializer
+        Serializer --> Views
+        Views --> Mobile_App: 201 Created
+
+    end
+
+end
+
+@enduml
