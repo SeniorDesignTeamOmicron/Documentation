@@ -1,0 +1,42 @@
+@startuml
+Title post steps
+actor Mobile_App
+participant Views
+participant Serializer
+participant Services
+participant Models
+database DB
+
+Mobile_App -> Views: POST /api/steps/
+Views -> Services: authenticate()
+Services --> Views
+
+alt authentication failure
+
+    Views --> Mobile_App: 403 Forbidden
+
+else authentication success
+
+    Views -> Serializer: decode
+    Serializer -> Serializer: validate
+
+    alt if validation failure
+
+        Serializer --> Views
+        Views --> Mobile_App: 400 Bad Request
+
+    else if valid
+
+        Serializer -> Models: Create Step objects
+        note left: This creates Location\n and sensor reading\n objects too
+        Models -> DB: Write all step\ninstances to database
+        DB --> Models
+        Models --> Serializer
+        Serializer --> Views
+        Views --> Mobile_App: 201 Created
+
+    end
+
+end
+
+@enduml
