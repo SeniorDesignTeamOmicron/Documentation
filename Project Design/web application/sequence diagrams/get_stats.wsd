@@ -1,0 +1,44 @@
+@startuml
+Title Get Statistical Object
+actor Mobile_App
+participant Views
+participant Serializer
+participant Services
+participant Models
+database DB
+
+
+Mobile_App -> Views: GET /api/steps/*/
+note left:  This Sequence diagram has been abstracted to show \n the sequence of events that occur when a client requests  \n a statistical resource. The reason for the abstraction \n is that the flow of control will be almost the  \n same for each reqeust, except that each request will  \n call a different service function for performing the query \n and formatting the data. Specifics of view can be viewed \n by visiting the documentation for the web API
+
+Views -> Services: authenticate
+Services --> Views
+
+alt if authentication fails
+
+    Views --> Mobile_App: 403 Forbidden
+
+else if authentication succeeds
+
+    Views -> Services: run data aggregation process
+
+    loop x times
+    Services -> Models: get models meeting\ncertain conditions
+    Models -> DB
+    DB --> Models
+    Models --> Services
+    Services -> Services: run aggregations\nand filtering
+    note left: Depending on the function, several \n related services may need to be \n called, and multiple database/model \n queries may be required
+    end
+
+    Services -> Services: format data
+
+    Services --> Views: results
+    Views -> Serializer: serialize objects
+    Serializer --> Views
+    Views --> Mobile_App: 200 OK
+
+
+end
+
+@enduml
