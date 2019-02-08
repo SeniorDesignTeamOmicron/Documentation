@@ -13,23 +13,23 @@
 * [x] Finalize the insole design and submit design documentation.
 * [x] Have ADC units working.
 * [x] Send data over a bluetooth connection.
-* [ ] Send and recieve data over Bluetooth from/to the mobile application.
+* [x] Send and recieve data over Bluetooth from/to the mobile application.
 ## Week 4
 * [x] Continue design work on all phases of the project.
 * [x] Begin work on ADC step data buffer.
 * [ ] Begin power optimizations on the microcontroller.
-* [ ] Connect the mobile application's user auth system to the web application.
+* [x] Connect the mobile application's user auth system to the web application.
 ## Week 5
 * [x] Continue design work on all phases of the project.
 ## Week 6
-* [ ] __[Milestone]__ Have a working prototype for the Microcontroller by Friday 1/18.
+* [x] __[Milestone]__ Have a working prototype for the Microcontroller by Friday 1/18.
   * Bluetooth Connection
   * Working ADC Units - Read voltages off the wire
   * ADC Buffering
   * Send ADC data over a bluetooth connection
-* [ ] __[Milestone]__ Have design documentation for all components finished.
+* [x] __[Milestone]__ Have design documentation for all components finished.
 ## Week 7
-* [ ] __[Milestone]__ Demonstrate functionality of the mobile application by Friday 1/25.
+* [x] __[Milestone]__ Demonstrate functionality of the mobile application by Friday 1/25.
   * Initiate bluetooth connection to the microcontroller.
   * Working User interface.
   * Ability to register and login users.
@@ -37,10 +37,10 @@
   * Sending step data to the web server.
 ## Week 8
 * [ ] Continue integration of insole, microcontroller, and mobile application.
-* [ ] Continue work on the web application.
+* [x] Continue work on the web application.
   * Should be integrating data into rich graphics.
 ## Week 9
-* [ ] __[Milestone]__ Demonstrate working web application by Friday 2/8.
+* [x] __[Milestone]__ Demonstrate working web application by Friday 2/8.
   * Ability to register and login users.
   * Functional, exposed data API for the mobile application to read and write data.
   * Data visualizations.
