@@ -17,7 +17,7 @@
 ## Week 4
 * [x] Continue design work on all phases of the project.
 * [x] Begin work on ADC step data buffer.
-* [ ] Begin power optimizations on the microcontroller.
+* [x] Begin power optimizations on the microcontroller.
 * [x] Connect the mobile application's user auth system to the web application.
 ## Week 5
 * [x] Continue design work on all phases of the project.
@@ -36,7 +36,7 @@
   * Buffering step data and adding GPS data to the data points.
   * Sending step data to the web server.
 ## Week 8
-* [ ] Continue integration of insole, microcontroller, and mobile application.
+* [x] Continue integration of insole, microcontroller, and mobile application.
 * [x] Continue work on the web application.
   * Should be integrating data into rich graphics.
 ## Week 9
